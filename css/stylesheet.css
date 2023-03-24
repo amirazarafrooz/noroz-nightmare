@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;1,600&family=Marcellus&display=swap');
+@import url(Hamburger-menu.css);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+}
+
+.nav:has(.check:checked) + .container {
+   display: none;
+ }
+
+.nav {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 100%;
+}
+
+/* .break-line {
+  border: 1px solid lightgray;
+  display: inline-block;
+  width: 100%;
+  height:1px;
+} */
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  gap: 20px;
+  border-top: 1px solid lightgray;
+  padding: 20px 0 20px 0;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  height: 20%;
+  /* z-index: 5; */
+}
+
+.instagram-nav img,.linkedin-nav img{
+  width: 16px;
+  height: 16px;
+}
+.behance-nav img{
+  width: 18px;
+  height: 18px;
+}
+.behance-nav,.instagram-nav,.linkedin-nav{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #E5E9ED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.behance-nav:hover,
+.instagram-nav:hover,
+.linkedin-nav:hover{
+  background-color: #b4b6b9;
+}
+
+
+
+
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  width: 100%;
+  background-color: white;
+  font-family: 'Marcellus', serif;
+  color:#012B55 ;
+  padding: 0 0 0 25px;
+}
+.description{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #F7F8F9;
+  padding: 40px 0 40px 0;
+}
+.description p{
+  width: 80%;
+  font-family: 'Marcellus', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #012B55;
+}
+.description span{
+  width: 80%;
+  font-family: 'Marcellus', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #597188;
+  margin-top: 30px;
+}
+.photobox img{
+  width: 100%;
+  margin: 2px 0 2px 0;
+}
+.photobox{
+  width: 100%;
+}
+.photo1,.photo2,.photo3,.photo4,
+.photo5,.photo6,.photo7,.photo8
+{
+  position: relative;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Marcellus', serif;
+  gap: 5px;
+  font-size: 1.2rem;
+  font-style: italic;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: #012b55d6;
+}
+
+.text2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+}
+.photo1:hover .middle, .photo2:hover .middle, .photo3:hover .middle, .photo4:hover .middle,
+.photo5:hover .middle, .photo6:hover .middle, .photo7:hover .middle, .photo8:hover .middle {
+  opacity: 1;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  gap: 5px;
+}
+.instagram img,.linkedin img{
+  width: 14px;
+  height: 14px;
+}
+.behance img{
+  width: 16px;
+  height: 16px;
+}
+.behance,.instagram,.linkedin{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #E5E9ED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.behance:hover,
+.instagram:hover,
+.linkedin:hover{
+  background-color: #b4b6b9;
+}
+.footer span{
+  font-family: 'Marcellus', serif;
+  margin: 15px 0 0 0;
+  color: #597188;
+  font-size: 1.2rem;
+}
+.sidebar2{
+  display: none;
+}
+.nav-icons2{
+  display: none;
+}
+.arrow{
+  display: none;
+}
+
+
+
+
+
+
+
+
+/*---------------------------- 600 to 900 for tablet---------------------------- */
+@media (min-width:600px){
+
+  .container{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .hamburger-menu{
+    display: none;
+  }
+  .sidebar,.nav-icons{
+  display: none;
+  }
+  .title{
+    font-size: 1.6rem;
+    margin: 0 0 30px 0;
+  }
+  .sidebar2{
+    display: flex;
+    font-size: 2rem;
+  }
+  .sidebar2 ul,
+  li a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: "Marcellus", serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.sidebar2 li:first-child {
+  font-weight: 600;
+}
+.sidebar2 li:last-child {
+  font-weight: 600;
+}
+.sidebar2 li{
+  margin: 15px 0 15px 0;
+}
+.nav-icons2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+
+  }
+
+.instagram-nav img,.linkedin-nav img{
+  width: 14px;
+  height: 14px;
+}
+.behance-nav img{
+  width: 16px;
+  height: 16px;
+}
+.behance-nav,.instagram-nav,.linkedin-nav{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #E5E9ED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    padding: 45px;
+  }
+  .right{
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .description p{
+    width: 70%;
+    height: 400px;
+    font-size: 3rem;
+  }
+
+  .photobox{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .photo1,.photo2,.photo3,.photo4,
+  .photo5,.photo6,.photo7,.photo8{
+    width: 50%;
+  }
+  .footer .icons{
+    margin: 20px 0 0px 0;
+  }
+  .footer span{
+    margin: 0 0 50px 0;
+  }
+  .footer{
+    position: relative;
+  }
+  .arrow{
+    border-radius: 10px;
+    background-color: #b4b6b99c;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    text-align: center;
+  }
+  .arrow img{
+    width: 15px;
+    height: 15px; 
+   }
+ 
+}
+
+
+
+
+
+@media (min-width:900px){
+  .header{
+    width: 35%;
+  }
+  .right{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+  .description{
+    height: 70vh;
+  }
+  .description p{
+    width: 70%;
+    height: 400px;
+    font-size: 3.2rem;
+  }
+  .nav-icons2{
+    width: 50%;
+  }
+}
